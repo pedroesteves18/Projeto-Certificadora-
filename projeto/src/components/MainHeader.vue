@@ -1,8 +1,12 @@
 <template>
+  
   <div class="header d-flex align-items-center justify-content-between px-5 py-3">
+
     <div class="BonsFluidos d-flex align-items-center">
+      <a href="">
       <img src="../assets/bonsFluidos.png" class="BonsFluidosImagem">
-      <div>bons <br>fluidos</div>
+      </a>
+      <a href="" style=""><div>bons <br>fluidos</div></a>
     </div>
     <div class="Noticias text-center">
       <div>Notícias</div>
@@ -29,6 +33,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none; 
+  color: inherit; 
+}
 .BonsFluidosImagem {
   width: 7rem;
   height: auto;
@@ -54,6 +62,7 @@ export default {
 }
 
 .barra {
+  margin-top: -0.80rem;
   width: 100%;
   height: 2px;
   background-color: white;
