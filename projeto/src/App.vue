@@ -20,6 +20,6 @@ export default {
 <style>
 body {
   margin: 0;
-  padding-top: 130px;
+  padding-top: 14.3vh;
 }
 </style>

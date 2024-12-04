@@ -14,7 +14,7 @@
         <input id="image-upload" type="file" accept="image/*" style="display: none;" />
 
 
-        <input class="inputDescricao" placeholder="Descrição da notícia">
+        <textarea  class="inputDescricao" placeholder="Descrição da notícia"></textarea>
       </div>
     </div>
     <div class="coluna-lateral"></div>
@@ -32,16 +32,16 @@
 
 
 .btn {
-  height: ;
+
 }
 
 .centro {
     width: 100%;  
-    height: 770px;
+    height: 85vh;
 }
 .centroColunas {
   width: 100%;
-  height: 768px;
+  height: 85.5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,13 +49,13 @@
 
 .coluna-lateral {
   width: 25%; 
-  height: 100%;
+  height: 85.5vh;
   background: linear-gradient(#F1B4C3,#dd6482);
 }
 
 .coluna-central {
   width: 50%;
-  height: 100%;
+  height: 85.5vh;
   background: linear-gradient(#F1B4C3,#dd6482);
   display: flex;
   justify-content: center;
@@ -64,36 +64,41 @@
 
 .caixaPostagem {
   width: 80%;
-  height: 40rem;
+  height: 60vh;
   background-color: white;
-  border-radius: 50px;
+  border-radius: 5vh;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 3vh;
   align-items: center;
-  gap: 10px;
+  gap: 1vh;
 }
 
 .inputTitulo {
   width: 80%;
-  height: 3rem;
-  border-radius: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: 4.5vh;
+  border-radius: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
 }
 
 .inputImagem {
-  padding-top: 120px;
-  padding-left: 170px;
   width: 80%;
-  height: 17rem;
-  border: solid black 0.5px;
-  border-radius: 20px;
+  height: 25vh;
+  border: solid black 0.05vh;
+  border-radius: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vh;
 }
 
 .inputDescricao {
   width: 80%;
-  height: 10rem;
+  height: 15vh;
+  border-radius: 3vh;
+  padding-left: 2vh;
+  resize: vertical;
 }
   
   

@@ -38,23 +38,23 @@ a {
   color: inherit; 
 }
 .BonsFluidosImagem {
-  width: 7rem;
+  width: 7vh;
   height: auto;
 }
 
 .BonsFluidos {
   color: #E11F4A;
-  font-size: 45px;
+  font-size: 4.5vh;
   font-weight: 700;
   display: flex;
-  gap: 1rem;
+  gap: 1vh;
   align-items: center;
 }
 
 .Noticias {
   color: white;
   font-weight: 730;
-  font-size: 70px;
+  font-size: 7vh;
   pointer-events: none;
   user-select: none;
   text-align: center;
@@ -62,87 +62,89 @@ a {
 }
 
 .barra {
-  margin-top: -0.80rem;
+  margin-top: -0.8vh;
   width: 100%;
-  height: 2px;
+  height: 0.2vh;
   background-color: white;
-  border: solid white 2px;
-  border-radius: 1px;
-  margin-bottom: 1rem;
+  border: solid white 0.2vh;
+  border-radius: 0.1vh;
+  margin-bottom: 1vh;
 }
 
 .header {
   background-color: #F1B4C3;
-  height: 120px;
+  height: 12vh;
   width: 100%;
   position: fixed;
   top: 0;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
 }
 
 .icons {
-  padding-top: 3rem;
-  padding-right: 6rem;
-  margin-left: 4rem;
+  padding-top: 4vh;
+  padding-right: 6vh;
+  margin-left: 4vh;
   align-items: center;
   margin-left: auto;
   display: flex;
-  gap: 1rem;
+  gap: 1vh;
 }
 .icons i.iconeYoutube{
   color: white;
-  font-size: 4rem;
+  font-size: 6vh;
 }
 
 .icons i {
   color: white;
-  font-size: 3rem;
+  font-size: 4vh;
 }
 
 
 @media (max-width: 1000px) {
 
   .BonsFluidos {
-    font-size: 40px;
+    font-size: 4vh;
   }
 
   .Noticias {
-    margin-left: 5rem;
-    font-size: 50px;
+    margin-left: 25vh;
+    font-size: 6vh;
   }
 
   .header {
-    padding-right: 2rem;
+    padding-right: 2vh;
   }
 
   .icons {
-    padding-top: 1rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    padding-top: 1vh;
+    padding-right: 3vh;
+    padding-left: 3vh;
   }
 
 }
 
 @media (max-width: 870px) {
   .header {
-    margin-right: 6rem;
+    margin-right: 6vh;
   }
 
   .BonsFluidos {
-    font-size: 30px;
-    margin-left: -2rem;
+    font-size: 3vh;
+    margin-left: -2vh;
   }
 
   .Noticias {
-    margin-left: 4rem;
-    font-size: 50px;
+    margin-right: 3vh;
+    margin-left: 22vh;
+    font-size: 6vh;
   }
 
 
   .icons {
-    padding-top: 1rem;
-    padding-right: 2rem;
-    gap: 4rem;
+    padding-top: 1vh;
+    padding-right: 2vh;
+    gap: 4vh;
   }
 
 
@@ -151,34 +153,34 @@ a {
 @media (max-width: 768px){
 
   .BonsFluidosImagem{
-    width: 6rem;
+    width: 10vh;
     height: auto;
   }
   .BonsFluidos{
-    font-size: 27px;
-    margin-left: -2.5rem;
+    font-size: 3vh;
+    margin-left: -2.5vh;
     gap:0;
   }
   
   .Noticias{
-    margin-left: 1rem;
-    font-size: 40px;
-    padding-top: 1rem;
+    margin-left: 1vh;
+    font-size: 7vh;
   }
 
   .icons i.iconeYoutube{
     color: white;
-    font-size: 3rem;
+    font-size: 6vh;
   }
   
   .icons i {
     color: white;
-    font-size: 2rem;
+    font-size: 5vh;
+    gap: 0;
   }
   .icons {
-    margin-left: -2rem;
-    padding-right: 1rem;
+    margin-left: -2vh;
   }
 }
+
 
 </style>
