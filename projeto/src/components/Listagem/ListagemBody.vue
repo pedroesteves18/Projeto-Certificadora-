@@ -40,7 +40,7 @@ import { ref, onMounted } from 'vue';
     .centro {
         padding-top: 2vh;
         width: 100%;  
-        min-height: 85.7vh;
+        min-height: 83.7vh;
         height: auto;
         background: linear-gradient(#F1B4C3,#dd6482);
         background-attachment: fixed;

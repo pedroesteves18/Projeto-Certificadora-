@@ -31,6 +31,7 @@
 </template>
   
   <script>
+  import padrao from '@/assets/padrao.png'
 
   export default {
     name: 'CentroAddNoticia',
@@ -57,7 +58,7 @@
       },
       cadastrar(){
         if(this.imageUrl === null){
-          this.imageUrl = '../assets/padrao.png'
+          this.imageUrl = padrao
         }
         const noticia = {
           titulo : this.inputTitulo,
