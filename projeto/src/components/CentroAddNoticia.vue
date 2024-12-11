@@ -37,6 +37,7 @@
     name: 'CentroAddNoticia',
     data(){
       return {
+        id: null,
         imageUrl: null,
         inputTitulo: '',
         inputDescricao: ''
@@ -60,7 +61,13 @@
         if(this.imageUrl === null){
           this.imageUrl = padrao
         }
+        if(this.id === null){
+          this.id = 0
+        } else {
+          this.id++
+        }
         const noticia = {
+          id: this.id,
           titulo : this.inputTitulo,
           descricao: this.inputDescricao,
           image: this.imageUrl
@@ -93,11 +100,11 @@
 
 .centro {
     width: 100%;  
-    height: 85vh;
+    height: 83.7vh;
 }
 .centroColunas {
   width: 100%;
-  height: 85.5vh;
+  height: 83.7vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,13 +112,13 @@
 
 .coluna-lateral {
   width: 25%; 
-  height: 85.5vh;
+  height: 83.7vh;
   background: linear-gradient(#F1B4C3,#dd6482);
 }
 
 .coluna-central {
   width: 50%;
-  height: 85.5vh;
+  height: 83.7vh;
   background: linear-gradient(#F1B4C3,#dd6482);
   display: flex;
   justify-content: center;

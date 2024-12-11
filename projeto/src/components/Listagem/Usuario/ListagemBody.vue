@@ -35,7 +35,7 @@ import { ref, onMounted } from 'vue';
   
   <style>
     .imagem {
-      max-width: 83%;
+      max-height: 34vh;
     }
     .centro {
         padding-top: 2vh;

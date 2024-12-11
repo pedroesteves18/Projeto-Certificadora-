@@ -1,18 +1,18 @@
 <template>
     <div class="ListagemPage">
       <MainHeader />
-      <ListagemBody />
+      <ListagemBodyAdm />
     </div>
   </template>
   
   <script>
-  import MainHeader from '../MainHeader.vue'
-  import ListagemBody from './ListagemBody.vue'
+  import MainHeader from '../../MainHeader.vue'
+  import ListagemBodyAdm from './ListagemBodyAdm.vue'
   export default {
     name: 'ListagemPage',
     components: {
       MainHeader,
-      ListagemBody
+      ListagemBodyAdm
     }
   }
   </script>
