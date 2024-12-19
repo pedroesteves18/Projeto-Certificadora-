@@ -260,4 +260,5 @@
       padding-left: 2vh;
       resize: none;
     }
+
   </style>
