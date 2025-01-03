@@ -53,6 +53,11 @@
 
     export default {
       name: 'ListagemBodyAdm',
+      methods:{
+        triggerFileInput() {
+          this.$refs.fileInput.click();
+        }
+      },
       setup() {
         const noticias = ref([]);
         const noticiaMostrar = ref(null);
@@ -112,6 +117,8 @@
           
           $router.push({ path: '/noticias' });
         };
+
+        
         const handleImageUpload = (event) => {
           const image = event.target.files[0];
           if (image) {
