@@ -18,26 +18,26 @@
 
 1. Instale o MongoDB seguindo as instruções no link fornecido.
 2. Inicie o serviço do MongoDB:
-   ```bash
+   ```
    mongod
    ```
 3. Crie um banco de dados chamado `certificadora`:
-   ```bash
+   ```
    use certificadora
    ```
 
 ## Roteiro para Salvar o Código, Compilar o Projeto e Executar a Aplicação
 
 1. Clone o repositório:
-   ```bash
-  https://github.com/pedroesteves18/Projeto-Certificadora-.git
+   ```
+    https://github.com/pedroesteves18/Projeto-Certificadora-.git
    ```
 2. Instale as dependências:
-   ```bash
+   ```
    npm install
    ```
 3. Inicie o servidor de desenvolvimento:
-   ```bash
+   ```
    npm run serve
    ```
 
