@@ -55,4 +55,3 @@ O sistema tem como objetivo gerenciar notícias, permitindo que usuários façam
 - Curtir e avaliar notícias
 - Criação, edição e exclusão de notícias por administradores
 
-### Roteiro para Testar o Sistema
