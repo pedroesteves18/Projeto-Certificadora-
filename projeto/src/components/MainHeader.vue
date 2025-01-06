@@ -40,7 +40,7 @@ a {
 
 .header {
   background-color: #F1B4C3;
-  height: 12vh;
+  height: 15vh;
   width: 100%;
   position: fixed;
   padding-left: 2vh;
