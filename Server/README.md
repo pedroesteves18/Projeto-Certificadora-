@@ -28,7 +28,7 @@ Este é o servidor do Projeto Certificadora, responsável por gerenciar as rotas
 
    ```env
    PORT=3001
-   MONGODB_URI=mongodb://localhost:27017/projeto-certificadora
+   MONGODB_URI=SUA URL
    ```
 
 ## Executando o servidor
