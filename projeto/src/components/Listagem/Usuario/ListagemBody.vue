@@ -1,9 +1,10 @@
 <template>
   <div class="centro">
     <div class="botoes-container">
-      <CriarNoticiaButton />
-      <EditarNoticiasButton />
-      <LoginButton />
+      <CriarNoticiaButton v-if="isLoggedIn" />
+      <EditarNoticiasButton v-if="isLoggedIn" />
+      <LoginButton v-if="!isLoggedIn" />
+      <ButtonLogout v-if="isLoggedIn" />
     </div>
     <div class="centroColunas">
       <div class="coluna-lateral"></div>
@@ -56,13 +57,15 @@ import { ref, onMounted } from 'vue';
 import CriarNoticiaButton from '../../Button/Button-post/CriarNoticiaButton.vue';
 import EditarNoticiasButton from '../../Button/Button-post/EditarNoticiasButton.vue';
 import LoginButton from '../../Button/Button-login/LoginButton.vue';
+import ButtonLogout from '../../Button/Button-login/ButtonLogout.vue';
 
 export default {
   name: 'ListagemBody',
   components: {
     CriarNoticiaButton,
     EditarNoticiasButton,
-    LoginButton
+    LoginButton,
+    ButtonLogout
   },
   setup() {
     const noticias = ref([]);
@@ -72,9 +75,10 @@ export default {
     const noticiaAvaliando = ref(null);
 
     const token = localStorage.getItem('token'); 
+    const isLoggedIn = ref(!!token);
     onMounted(async () => {
       try {
-        const response = await axios.get('http://localhost:3000/noticias', {
+        const response = await axios.get('http://localhost:3001/noticias', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -97,8 +101,8 @@ export default {
       try {
         const noticia = noticias.value[index];
         const url = noticia.liked 
-          ? `http://localhost:3000/noticias/${noticia._id}/dislike` 
-          : `http://localhost:3000/noticias/${noticia._id}/like`;
+          ? `http://localhost:3001/noticias/${noticia._id}/dislike` 
+          : `http://localhost:3001/noticias/${noticia._id}/like`;
         await axios.post(url, {}, {
           headers: {
             Authorization: `Bearer ${token}`
@@ -128,7 +132,7 @@ export default {
     const enviarAvaliacao = async () => {
       try {
         const noticia = noticias.value[noticiaAvaliando.value];
-        await axios.post(`http://localhost:3000/noticias/${noticia._id}/avaliar`, { avaliacao: avaliacao.value }, {
+        await axios.post(`http://localhost:3001/noticias/${noticia._id}/avaliar`, { avaliacao: avaliacao.value }, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -147,7 +151,7 @@ export default {
     };
 
     const getImageUrl = (imagePath) => {
-      return `http://localhost:3000/${imagePath}`;
+      return `http://localhost:3001/${imagePath}`;
     };
 
     return {
@@ -164,6 +168,7 @@ export default {
       enviarAvaliacao,
       calcularMediaAvaliacao,
       getImageUrl,
+      isLoggedIn,
     };
   },
 };

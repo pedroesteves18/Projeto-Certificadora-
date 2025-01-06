@@ -71,7 +71,7 @@ export default {
       console.log('Dados do formulário:', formData.get('titulo'), formData.get('conteudo'), formData.get('imagem'));
 
       try {
-        const response = await axios.post('http://localhost:3000/noticias/upload', formData, {
+        const response = await axios.post('http://localhost:3001/noticias/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             'Authorization': `Bearer ${localStorage.getItem('token')}`

@@ -49,7 +49,7 @@ export default {
       }
 
       try {
-        const response = await axios.post('http://localhost:3000/usuarios/register', {
+        const response = await axios.post('http://localhost:3001/usuarios/cadastro', {
           username: this.username,
           email: this.email,
           password: this.password

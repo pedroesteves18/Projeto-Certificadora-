@@ -135,9 +135,7 @@ router.post('/:id/dislike', auth, async (req, res) => {
   }
 });
 
-router.get('/mock', (req, res) => {
-  res.status(200).json(noticias);
-});
+
 
 
 module.exports = router;

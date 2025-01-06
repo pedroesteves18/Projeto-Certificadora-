@@ -55,7 +55,7 @@ export default {
 
     onMounted(async () => {
       try {
-        const response = await axios.get('http://localhost:3000/noticias');
+        const response = await axios.get('http://localhost:3001/noticias');
         noticias.value = response.data;
       } catch (error) {
         console.error('Erro ao carregar notícias:', error);
@@ -72,7 +72,7 @@ export default {
     const remover = async (index) => {
       try {
         const noticiaId = noticias.value[index]._id;
-        await axios.delete(`http://localhost:3000/noticias/${noticiaId}`, {
+        await axios.delete(`http://localhost:3001/noticias/${noticiaId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
@@ -103,7 +103,7 @@ export default {
         }
 
         try {
-          const response = await axios.put(`http://localhost:3000/noticias/${noticiaId}`, formData, {
+          const response = await axios.put(`http://localhost:3001/noticias/${noticiaId}`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
               'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -121,7 +121,7 @@ export default {
         formData.append('imagem', fileInput.value.files[0]);
 
         try {
-          const response = await axios.post('http://localhost:3000/noticias', formData, {
+          const response = await axios.post('http://localhost:3001/noticias', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
               'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -155,7 +155,7 @@ export default {
     };
 
     const getImageUrl = (imagePath) => {
-      return `http://localhost:3000/${imagePath}`;
+      return `http://localhost:3001/${imagePath}`;
     };
 
     return {
